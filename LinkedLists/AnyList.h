@@ -2,6 +2,7 @@
 #define ANYLIST_H
 
 #include <string> // need to include for nullptr
+#include <vector>
 
 class Node
 {
@@ -45,12 +46,25 @@ public:
     // Constructor
     AnyList() : ptrToFirst(nullptr), count(0) {}
 
+    // Overloaded Constructor
+    // copies value in vector into a linked list
+    AnyList(std::vector<int>& v) 
+    {
+        ptrToFirst = nullptr;
+        count = static_cast<int>(v.size());
+
+        for (int i = count - 1; i >= 0; --i)
+        { ptrToFirst = new Node(v[i], ptrToFirst); }
+    }
+
     // Functions
     void insertFront(int);
 
     void print() const;
 
     void clearList();
+
+
 
     // Destructor
     ~AnyList();

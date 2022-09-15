@@ -1,6 +1,7 @@
 #include "AnyList.h"
 #include <iostream>
 
+
 using namespace std;
 
 void AnyList::insertFront(int newData)
