@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../VSCodePython"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.irb": "ruby",
+			"string": "cpp",
+			"iostream": "cpp"
+		}
+	}
+}
