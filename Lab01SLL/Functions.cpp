@@ -1,3 +1,9 @@
+#include "Functions.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 /**
  * This is a back up file for my Lab 1 Code check assignments
  * Hopefully this will not be needed at all!
