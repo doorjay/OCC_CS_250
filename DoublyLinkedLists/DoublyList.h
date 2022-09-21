@@ -6,25 +6,24 @@
 class Node
 {
 public:
-    // Constructors
     Node() : data(0), prev(nullptr), next(nullptr) {}
     Node(int theData, Node* prevLink, Node* nextLink)
         : data(theData), prev(prevLink), next(nextLink) {}
-    
-    // Functions
+
+    // getters
     int getData() const { return data; }
     Node* getPrev() const { return prev; }
     Node* getNext() const { return next; }
 
-    void setData(int newData) { data = newData; }
+    // setters
+    void setData(int theData) { data = theData; }
     void setPrev(Node* prevLink) { prev = prevLink; }
     void setNext(Node* nextLink) { next = nextLink; }
 
-    // Deconstructor
-    ~Node();
-
+    // deconstructor
+    ~Node() {}
+    
 private:
-    // can hold multiple instances of data ei a string and an int
     int data;
     Node* prev;
     Node* next;
@@ -32,6 +31,7 @@ private:
 
 class DoublyList
 {
+public:
     DoublyList() : first(nullptr), last(nullptr), count(0) {}
 
     void insertFront(int newData);
