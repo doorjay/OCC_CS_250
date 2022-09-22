@@ -46,3 +46,19 @@ void DoublyList::printReverse() const
         current = current->getPrev();
     }
 }
+
+void DoublyList::deleteNode(int element)
+{
+    if (first == nullptr)
+    {
+        cerr << "The list is empty, nothing to delete.\n";
+    }
+    else if (first->getData() == element)
+    {
+        // quick access to first node
+    }
+    else
+    {
+
+    }
+};

@@ -40,7 +40,8 @@ public:
     void printReverse() const;
 
     void clearList();
-    ~DoublyList();
+    void deleteNode(int element);
+    ~DoublyList() {}
 
 private:
     Node* first;
