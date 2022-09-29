@@ -41,32 +41,28 @@ void DArray::rotate(int rotateIdx)
 
 // Problem # 2
 void DArray::rotateRange(int first, int middle, int last)
-{   
-   // num of elements to rotate (+1 because want elements not idx)
-   int range = last - first + 1; 
-   int tempArr[range]; // array to store range in order
+{
+   int range = last - first + 1;
+   int tempArr[range];
    
-   // add elemnts starting at middle until last to tempArr
-   int i = 0;
-   for (i = 0; i < last - middle + 1; ++i)
+   int index = 0; // index for tempArr
+   for (index = 0; index < last - middle + 1; ++index)
    {
-      tempArr[i] = a[middle + i];
+      tempArr[index] = a[middle + index];
    }
    
-   // add elements starting at first until middle to tempArr
-   int x = 0;
-   for (int j = i; j < range; ++j)
+   for (int x = 0; x < middle; ++x)
    {
-      tempArr[j] = a[first + x];
-      ++x;
+      tempArr[index] = a[first + x];
+      ++index;
    }
    
-   // replace values in range, rotated
    for (int j = 0; j < range; ++j)
    {
       a[first + j] = tempArr[j];
    }
 }
+
 
 // maybe a solution with an if statement?
 
