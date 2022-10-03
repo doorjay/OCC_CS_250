@@ -86,3 +86,21 @@ void DArray::rotateRange(int first, int middle, int last)
 //       a[first + i - 1] = tempArr[i];
 //    }
 // }
+
+// trying to find a better solution using nested loops
+void DArray::rotateRange2(int first, int middle, int last)
+{
+   int range = middle - first;
+
+   while (range-- > 0)
+   {
+      int firstVal = a[first];
+      int nextVal;
+      for (int i = first; i < last; ++i)
+      {
+         nextVal = a[i + 1];
+         a[i] = nextVal;
+      }
+      a[last] = firstVal;
+   }
+}
