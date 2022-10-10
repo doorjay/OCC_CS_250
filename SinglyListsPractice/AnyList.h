@@ -30,7 +30,7 @@ public:
 	int getCount() const { return count; } 
 	void printList() const;
 
-
+	void swapFirstLast();
 	void insertNodeFront(int value);
 	void insertNodeEnd(int value);
 

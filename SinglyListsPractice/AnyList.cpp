@@ -69,6 +69,10 @@ void AnyList::insertNodeEnd(int value)
 	++count;
 }
 
+/**
+ * Prints each element in a singly linked list
+ */ 
+
 void AnyList::printList() const
 {
 	if (first == nullptr)
@@ -90,4 +94,46 @@ void AnyList::printList() const
 	}
 
 	
+}
+
+/**
+ * Swap the first node with the last node
+ */ 
+void AnyList::swapFirstLast()
+{
+	if (first == nullptr)
+	{
+		cerr << "This list is empty\n";
+	}
+	else if (count == 2)
+	{
+		Node* temp = first->getNext();
+		
+		temp->setNext(first);
+		first = temp;
+		temp->getNext()->setNext(nullptr);
+		
+	}
+	else
+	{
+		Node* secondLast = first;
+		Node* firstNode = first;
+
+		while (secondLast->getNext()->getNext() != nullptr)
+		{
+			secondLast = secondLast->getNext();
+		}
+
+		// first is pointing at last element
+		first = secondLast->getNext();
+
+		// last node is pointing at second element
+		secondLast->getNext()->setNext(firstNode->getNext());
+
+		// second to last is pointing at
+		secondLast->setNext(firstNode);
+
+		// set the "first" to point at end
+		firstNode->setNext(nullptr);
+	}
 }
