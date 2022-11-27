@@ -1,8 +1,9 @@
 /*
-	Dorje Pradhan
-    November 27, 2022
-    C++ 2, CS 250
-    Project 1, Part A
+	Pradhan, Dorje
+
+    Fall 2022
+    CS A250 -  C++ 2
+    Project: CS Courses
 */
 
 #include "Course.h"
@@ -43,7 +44,7 @@ int Course::getCourseUnits() const
 }
 
 // Definition function getPrereqs
-const set<int>& Course::getCoursePrerqs() const
+const set<int>& Course::getCoursePrereqs() const
 {
 	return prereqs;
 }
@@ -86,3 +87,4 @@ void Course::setPrereqs(int newPrereqs[], int lengthPrereqs)
 		prereqs.insert(newPrereqs[i]);
 	}
 }
+

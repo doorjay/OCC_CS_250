@@ -1,8 +1,9 @@
 /*
-	Dorje Pradhan
-    November 27, 2022
-    C++ 2, CS 250
-    Project 1, Part A
+	Pradhan, Dorje
+
+    Fall 2022
+    CS A250 -  C++ 2
+    Project: CS Courses
 */
 
 #ifndef COURSE_H
@@ -19,6 +20,9 @@ public:
     Course() : courseName("N/A"), courseNumber(0),
                courseUnits(0) {}
 
+    // overloaded contructor for ALL non-static member variables
+    // int courseNumber, string courseName
+    // int courseunits, set<int> prereqs
     Course(int theCourseNumber, const std::string& theCourseName,
            int theCourseUnits, const std::set<int>& theCoursePrereqs);
 
@@ -34,7 +38,7 @@ public:
     int getCourseUnits() const;
 
     // returns the set<int> prereqs by reference as a constant 
-    const std::set<int>& getCoursePrerqs() const;
+    const std::set<int>& getCoursePrereqs() const;
 
     // returns Course object by reference as a constant 
     const Course& getCourse() const;
