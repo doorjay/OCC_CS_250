@@ -54,6 +54,8 @@ public:
 
     void setCourseUnits(int newCourseUnits);
 
+    // @param newPrereqs, an array that contains all prereq courses
+    // @param lengthPrereqs, the length of newPrereqs
     void setPrereqs(int newPrereqs[], int lengthPrereqs);
 
 	// Destructor

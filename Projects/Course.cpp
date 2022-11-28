@@ -82,8 +82,12 @@ void Course::setCourseUnits(int newCourseUnits)
 // Definition function setPrereqs
 void Course::setPrereqs(int newPrereqs[], int lengthPrereqs)
 {
+	// clear existing prereqs 
+	prereqs.clear();
+
 	for (int i = 0; i < lengthPrereqs; ++i)
 	{
 		prereqs.insert(newPrereqs[i]);
 	}
 }
+
