@@ -87,4 +87,3 @@ void Course::setPrereqs(int newPrereqs[], int lengthPrereqs)
 		prereqs.insert(newPrereqs[i]);
 	}
 }
-
