@@ -57,7 +57,8 @@ public:
     void setPrereqs(int newPrereqs[], int lengthPrereqs);
 
 	// Destructor
-
+    ~Course() {}
+    
 private: // DO NOT MODIFY!!!! ---------------------------------------
 	int courseNumber;
 	std::string courseName;	
